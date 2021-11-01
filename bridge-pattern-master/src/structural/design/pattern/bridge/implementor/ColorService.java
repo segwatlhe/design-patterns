@@ -1,6 +1,6 @@
 package structural.design.pattern.bridge.implementor;
 
-public interface Color {
+public interface ColorService {
 
 	public void applyColor();
 }

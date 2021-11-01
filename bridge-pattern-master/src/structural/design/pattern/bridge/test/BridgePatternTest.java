@@ -1,19 +1,20 @@
 package structural.design.pattern.bridge.test;
 
-import structural.design.pattern.bridge.abstraction.Pentagon;
-import structural.design.pattern.bridge.abstraction.Shape;
-import structural.design.pattern.bridge.abstraction.Triangle;
-import structural.design.pattern.bridge.implementor.GreenColor;
-import structural.design.pattern.bridge.implementor.RedColor;
+import structural.design.pattern.bridge.abstraction.PentagonServiceBean;
+import structural.design.pattern.bridge.abstraction.ShapeService;
+import structural.design.pattern.bridge.abstraction.TriangleServiceBean;
+import structural.design.pattern.bridge.implementor.GreenColorServiceBean;
+import structural.design.pattern.bridge.implementor.RedColorServiceBean;
 
 public class BridgePatternTest {
 
 	public static void main(String[] args) {
-		Shape tri = new Triangle(new RedColor());
-		tri.applyColor();
 		
-		Shape pent = new Pentagon(new GreenColor());
-		pent.applyColor();
+		ShapeService triangleService = new TriangleServiceBean(new RedColorServiceBean());
+		triangleService.applyColor();
+		
+		ShapeService pentagonService = new PentagonServiceBean(new GreenColorServiceBean());
+		pentagonService.applyColor();
 	}
 
 }

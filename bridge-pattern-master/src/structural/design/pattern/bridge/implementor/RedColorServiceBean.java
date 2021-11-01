@@ -1,6 +1,6 @@
 package structural.design.pattern.bridge.implementor;
 
-public class RedColor implements Color{
+public class RedColorServiceBean implements ColorService{
 
 	public void applyColor(){
 		System.out.println("red.");
